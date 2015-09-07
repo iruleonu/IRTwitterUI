@@ -16,6 +16,8 @@
 		405AF6D61B9CB90800AC3F20 /* IRTwitterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 405AF6D51B9CB90800AC3F20 /* IRTwitterUITests.m */; };
 		405AF6E91B9CC56400AC3F20 /* IRAvatarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 405AF6E81B9CC56300AC3F20 /* IRAvatarImageView.m */; };
 		405AF6EE1B9CC5FE00AC3F20 /* IRTwitterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 405AF6ED1B9CC5FE00AC3F20 /* IRTwitterButton.m */; };
+		405AF6F11B9CE55500AC3F20 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 405AF6F01B9CE55500AC3F20 /* FXBlurView.m */; };
+		405AF6F41B9CEAF600AC3F20 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 405AF6F31B9CEAF600AC3F20 /* UIView+Extensions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		405AF6E81B9CC56300AC3F20 /* IRAvatarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRAvatarImageView.m; sourceTree = "<group>"; };
 		405AF6EC1B9CC5FE00AC3F20 /* IRTwitterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IRTwitterButton.h; sourceTree = "<group>"; };
 		405AF6ED1B9CC5FE00AC3F20 /* IRTwitterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IRTwitterButton.m; sourceTree = "<group>"; };
+		405AF6EF1B9CE55500AC3F20 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		405AF6F01B9CE55500AC3F20 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		405AF6F21B9CEAF600AC3F20 /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
+		405AF6F31B9CEAF600AC3F20 /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +184,8 @@
 		405AF6E51B9CBB3100AC3F20 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				405AF6F21B9CEAF600AC3F20 /* UIView+Extensions.h */,
+				405AF6F31B9CEAF600AC3F20 /* UIView+Extensions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -185,6 +193,8 @@
 		405AF6E61B9CC54D00AC3F20 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				405AF6EF1B9CE55500AC3F20 /* FXBlurView.h */,
+				405AF6F01B9CE55500AC3F20 /* FXBlurView.m */,
 				405AF6EB1B9CC5DF00AC3F20 /* Buttons */,
 				405AF6EA1B9CC5D700AC3F20 /* ImageViews */,
 			);
@@ -311,10 +321,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				405AF6C21B9CB90800AC3F20 /* IRRootViewController.m in Sources */,
+				405AF6F41B9CEAF600AC3F20 /* UIView+Extensions.m in Sources */,
 				405AF6EE1B9CC5FE00AC3F20 /* IRTwitterButton.m in Sources */,
 				405AF6BF1B9CB90800AC3F20 /* IRAppDelegate.m in Sources */,
 				405AF6E91B9CC56400AC3F20 /* IRAvatarImageView.m in Sources */,
 				405AF6BC1B9CB90800AC3F20 /* main.m in Sources */,
+				405AF6F11B9CE55500AC3F20 /* FXBlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,8 +454,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IRTwitterUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -453,8 +467,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IRTwitterUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -513,6 +529,7 @@
 				405AF6DB1B9CB90800AC3F20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		405AF6DC1B9CB90800AC3F20 /* Build configuration list for PBXNativeTarget "IRTwitterUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +538,7 @@
 				405AF6DE1B9CB90800AC3F20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

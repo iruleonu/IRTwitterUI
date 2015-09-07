@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="height" constant="107" id="ozq-9s-YRt"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDL-Cg-fgt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDL-Cg-fgt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="stewie_400x400" translatesAutoresizingMaskIntoConstraints="NO" id="g9i-7r-XJ2" userLabel="AvatarImage" customClass="IRAvatarImageView">
@@ -71,7 +71,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFD-eT-OkC" userLabel="Sizer">
-                                        <rect key="frame" x="0.0" y="292" width="600" height="286"/>
+                                        <rect key="frame" x="0.0" y="477" width="600" height="286"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="286" id="ARQ-bb-5au"/>
@@ -81,22 +81,25 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="CFD-eT-OkC" secondAttribute="trailing" id="23J-RP-dKN"/>
                                     <constraint firstItem="CFD-eT-OkC" firstAttribute="leading" secondItem="cDL-Cg-fgt" secondAttribute="leading" id="4mk-dV-J0e"/>
-                                    <constraint firstAttribute="bottom" secondItem="CFD-eT-OkC" secondAttribute="bottom" id="5qt-QD-EgM"/>
+                                    <constraint firstAttribute="bottom" secondItem="CFD-eT-OkC" secondAttribute="bottom" constant="37" id="5qt-QD-EgM"/>
                                     <constraint firstAttribute="centerY" secondItem="7yx-lz-eH1" secondAttribute="centerY" id="HU7-sa-TTO"/>
                                     <constraint firstAttribute="trailing" secondItem="iaT-iq-H2R" secondAttribute="trailing" constant="10" id="IVU-nC-pq5"/>
-                                    <constraint firstItem="iaT-iq-H2R" firstAttribute="leading" secondItem="cDL-Cg-fgt" secondAttribute="leading" priority="999" constant="478" id="Kyn-Bo-tL4"/>
                                     <constraint firstItem="iaT-iq-H2R" firstAttribute="top" secondItem="cDL-Cg-fgt" secondAttribute="top" constant="118" id="PVQ-70-b4W"/>
                                     <constraint firstAttribute="centerX" secondItem="7yx-lz-eH1" secondAttribute="centerX" id="uD4-XT-Pod"/>
-                                    <constraint firstItem="CFD-eT-OkC" firstAttribute="top" secondItem="cDL-Cg-fgt" secondAttribute="top" constant="292" id="zgk-oF-aqP"/>
+                                    <constraint firstItem="CFD-eT-OkC" firstAttribute="top" secondItem="cDL-Cg-fgt" secondAttribute="top" constant="477" id="zgk-oF-aqP"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2Cz-pu-yJi"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kIY-1b-RdX" secondAttribute="trailing" id="2KT-Sv-Ur8"/>
+                            <constraint firstItem="CFD-eT-OkC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="SiY-36-ofY"/>
                             <constraint firstItem="cDL-Cg-fgt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="VTo-AR-48D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cDL-Cg-fgt" secondAttribute="trailing" constant="-16" id="VgG-Cy-IA3"/>
-                            <constraint firstItem="cDL-Cg-fgt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="aAS-ar-aVp"/>
+                            <constraint firstAttribute="trailing" secondItem="cDL-Cg-fgt" secondAttribute="trailing" id="VgG-Cy-IA3"/>
+                            <constraint firstItem="cDL-Cg-fgt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aAS-ar-aVp"/>
                             <constraint firstItem="kIY-1b-RdX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bmw-xQ-uCY"/>
                             <constraint firstItem="kIY-1b-RdX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="jna-ca-V4e"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cDL-Cg-fgt" secondAttribute="bottom" id="pHE-k5-1Lr"/>
